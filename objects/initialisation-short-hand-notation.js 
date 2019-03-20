@@ -1,0 +1,6 @@
+function Email(to, from, subject) {
+  return { to, from, subject }; // note: no explicit "key" definition
+}
+let email = new Email("Greg Byrne", "MENSA", "Your results are in - wow!");
+console.log(email); 
+// { to: 'Greg Byrne', from: 'MENSA', subject: 'Your results are in - wow!' }
