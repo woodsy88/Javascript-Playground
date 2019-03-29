@@ -71,7 +71,7 @@ let result7 = quoteSample.match(vowelRegex);
 console.log(result7);
 
 
-//  using a character range
+//  match a range of characters using a character range
 let catStr = "cat";
 let batStr = "bat";
 let matStr = "mat";
@@ -82,5 +82,20 @@ matStr.match(bg1Regex); // Returns null
 
 
 let quoteSample2 = "The quick brown fox jumps over the lazy dog.";
-let alphabetRegex = /[a-z]gi/; // Change this line
-let result8 = alphabetRegex; 
+let alphabetRegex = /[a-z]/gi; // Change this line
+let result8 = quoteSample2.match(alphabetRegex);
+console.log(result8);
+
+
+// Match a range of numbers using a numbers range
+let jennyStr = "Jenny8675309";
+let myRegex2 = /[a-z0-9]/ig;
+// matches all letters and numbers in jennyStr
+jennyStr.match(myRegex2);
+
+let quoteSample1 = "Blueberry 3.141592653s are delicious.";
+let myRegex3 = /[h-s2-6]/gi; 
+let result9 = quoteSample1.match(myRegex3); 
+console.log(result9);
+
+// create a set of characters that you do not want to match. These types of character sets are called negated character sets.
