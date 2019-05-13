@@ -26,7 +26,7 @@ let petRegex = /dog|cat|bird|fish/; // Change this line
 let result3 = petRegex.test(petString);
 console.log(result3);
 
-// ignore case with /i
+// I - ignore case with /i
 let myString1 = "freeCodeCamp";
 let fccRegex = /FreeCodeCamp/i; // Change this line
 let result4 = fccRegex.test(myString1);
@@ -40,7 +40,7 @@ let result6 = extractStr.match(codingRegex); // Change this line
 console.log(result6);
 
 
-// To search or extract a pattern more than once, you can use the g flag.
+// G - To search or extract a pattern more than once, you can use the g flag.
 
 let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /Twinkle/gi; // Change this line
@@ -99,3 +99,38 @@ let result9 = quoteSample1.match(myRegex3);
 console.log(result9);
 
 // create a set of characters that you do not want to match. These types of character sets are called negated character sets.
+// single regex that matches all characters that are not a number or a vowel.
+
+
+let quoteSample4 = "3 blind mice.";
+let myRegex4 = /[^aeiou1-9]/gi; 
+let result10 = quoteSample4.match(myRegex4); 
+console.log(result10);
+
+
+// Match Characters that Occur One or More Times In a Row
+//  + character matchs anything ONE or more times
+
+let difficultSpelling = "Mississippi";
+let myRegex5 = /s+/g; // Change this line
+let result11 = difficultSpelling.match(myRegex5);
+console.log(result11);
+
+
+// using the * to find characters that occur ZERO or more times
+
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+soccerWord.match(goRegex); // Returns ["goooooooo"]
+gPhrase.match(goRegex); // Returns ["g"]
+oPhrase.match(goRegex); // Returns null
+
+// uses the * character to match all the upper and lower "a"
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /a*/i; // Change this line
+let result12 = chewieQuote.match(chewieRegex);
+console.log(result12);
+
+// Find Characters with Lazy Matching           
