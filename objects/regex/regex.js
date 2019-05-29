@@ -100,8 +100,6 @@ console.log(result9);
 
 // create a set of characters that you do not want to match. These types of character sets are called negated character sets.
 // single regex that matches all characters that are not a number or a vowel.
-
-
 let quoteSample4 = "3 blind mice.";
 let myRegex4 = /[^aeiou1-9]/gi; 
 let result10 = quoteSample4.match(myRegex4); 
@@ -133,4 +131,36 @@ let chewieRegex = /a*/i; // Change this line
 let result12 = chewieQuote.match(chewieRegex);
 console.log(result12);
 
-// Find Characters with Lazy Matching           
+// Find Characters with Lazy Matching with ?        
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex7 = /<[h1].*?>/; // Change this line
+let result13 = text.match(myRegex7);
+console.log(result13);
+
+
+// test if a string contains something - gets a true or false result
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let result14 = calRegex.test(rickyAndCal);
+console.log(result14);
+
+// You can search the end of strings using the dollar sign character $ at the end of the regex.
+
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let result15 = lastRegex.test(caboose);
+console.log(result15);
+
+
+// search for all letters of the alphabet with [a-z] with This shortcut is equal to [A-Za-z0-9_]
+
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+let numbers = "42";
+let varNames = "important_var";
+longHand.test(numbers); // Returns true
+shortHand.test(numbers); // Returns true
+longHand.test(varNames); // Returns true
+shortHand.test(varNames); // Returns true
