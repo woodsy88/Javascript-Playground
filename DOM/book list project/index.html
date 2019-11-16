@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="app.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <h2>Search for Books</h2>
+  <form id="search-books" action="search">
+    <input class="input1" type="text">
+    <button type="submit"></button>
+  </form>
+  
+  <ul id="book-list">
+    <h2>Book list</h2>
+    <li class="item">
+      <span class="name">andrew</span>
+      <button class="delete">Delete</button>
+    </li>
+    <li class="item">
+      <span class="name">jim</span>
+      <button class="delete">Delete</button>
+    </li>
+    <li class="item">
+      <span class="name">bill</span>
+      <button class="delete">Delete</button>
+    </li>
+    <li class="item">
+      <span class="name">bobby</span>
+      <button class="delete">Delete</button>
+    </li>
+  </ul>
+  
+  <h2>Add New Books</h2>
+  <form id="add-book" action="submit">
+    <input type="checkbox" id="hide">
+    <label for="hide">Hide all books</label>
+    <input class="input2" type="text">
+    <button type="submit">New Book</button>
+  </form>
+</body>
+
+<div id="tabbed-content">
+  <ul class="tabs">
+    <li data-item="#about" class="active">About</li>
+    <li data-item="#contact">Contact</li>
+  </ul>
+  <div class="panel active" id="about">
+    <p>About</p>
+    <p>Incididunt irure enim mollit nostrud. Incididunt irure enim mollit nostrud.</p>
+  </div>
+  <div class="panel" id="contact">
+    <p>Contact</p>
+    <p>Velit aliqua dolor exercitation sint magna enim aute cupidatat sit labore. Nulla ex fugiat esse excepteur deserunt reprehenderit magna anim. Eu duis pariatur eu esse mollit eu ex anim quis fugiat enim elit labore id. Id aliquip ex qui enim voluptate non irure. Cupidatat aute qui qui ea quis officia et.</p>
+  </div>
+</div>
+  
+  
+
+
+</html>
